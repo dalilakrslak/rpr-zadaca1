@@ -1,12 +1,11 @@
 package ba.unsa.etf.rpr;
 
-import java.util.InputMismatchException;
 import java.util.Stack;
 
 import static java.lang.Double.parseDouble;
 
 /**
- *
+ * Klasa koja računa aritmetički izraz omeđen zagradama koristeći Dijakstra algoritam
  * @author Dalila Kršlak
  */
 public class ExpressionEvaluator {
@@ -80,9 +79,17 @@ public class ExpressionEvaluator {
         }
         return values.pop();
     }
+
+    /**
+     * Metoda koja provjerava da li je string jednak jednom od operatora
+     */
     public static boolean isOperator(String clan){
         return clan.equals("+") || clan.equals("-") || clan.equals("/") || clan.equals("*") || clan.equals("sqrt") || clan.equals("(") || clan.equals(")");
     }
+
+    /**
+     * Metoda koja provjerava da li je string realan broj
+     */
 
     public static boolean isNumeric(String clan){
         double vrijednost;

@@ -3,7 +3,8 @@ import java.util.Objects;
 
 import static ba.unsa.etf.rpr.ExpressionEvaluator.*;
 /**
- *
+ * Class App
+ * Klasa koja vrsi validaciju ulaza s konzole
  * @author Dalila Kršlak
  * @version 1.0
  */
@@ -20,7 +21,6 @@ public class App
         }
         catch (Exception e){
             System.err.println(e.getMessage());
-            System.err.println(e);
         }
 
     }
