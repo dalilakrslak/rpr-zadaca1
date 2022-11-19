@@ -28,6 +28,15 @@ public class ExpressionEvaluator {
         if(rastava.length<4){
             throw greska;
         }
+        int desna = 0, lijeva = 0, znak = 0;
+        for(String clan: rastava){
+            if(clan.equals("+") || clan.equals("-") || clan.equals("*") || clan.equals("sqrt") || clan.equals("/")) znak++;
+            if(clan.equals("(")) lijeva++;
+            if(clan.equals(")")) desna++;
+        }
+        if(desna != lijeva || znak != desna){
+            throw greska;
+        }
         for (String clan: rastava){
             if(!isOperator(clan) && !isNumeric(clan)){
                 throw greska;
